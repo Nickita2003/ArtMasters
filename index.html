@@ -1,0 +1,1348 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GlideGuard Triumph - Купить инновационные ролики будущего</title>
+    <!-- Подключаем библиотеку анимаций -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Подключаем шрифты Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Иконки Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* ========== Глобальные переменные стилей ========== */
+      :root {
+        --primary: #e30613; /* Основной красный цвет */
+        --secondary: #1a3e72; /* Темно-синий цвет */
+        --accent: #ffd700; /* Золотой акцентный цвет */
+        --dark: #0a0a0a; /* Темный цвет для текста */
+        --light: #ffffff; /* Белый цвет */
+      }
+
+      /* ========== Основные стили страницы ========== */
+      body {
+        font-family: "Roboto", sans-serif; /* Основной шрифт */
+        margin: 0;
+        padding: 0;
+        color: var(--dark);
+        line-height: 1.6;
+        overflow-x: hidden;
+        background-color: #f5f5f5;
+      }
+
+      .container {
+        max-width: 1200px; /* Максимальная ширина контента */
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* ========== Секция Hero (Главный баннер) ========== */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          var(--secondary) 0%,
+          var(--dark) 100%
+        );
+        color: var(--light);
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("ролики банер2.jpg") no-repeat center center;filter: brightness(1.6) contrast(4.1);
+        background-size: cover;
+        opacity: 0.2;
+        z-index: 0;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+      }
+
+      h1 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-size: 4rem;
+        margin: 0;
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .hero-subtitle {
+        font-size: 1.8rem;
+        margin: 20px 0;
+        font-weight: 500;
+      }
+
+      .hero-cta {
+        margin-top: 40px;
+      }
+
+      /* Анимация пульсации для кнопки CTA */
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      /* Стили для основной кнопки */
+      .cta-button {
+        display: inline-block;
+        background-color: var(--primary);
+        color: var(--light);
+        padding: 18px 45px;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 20px rgba(227, 6, 19, 0.3);
+        animation: pulse 2s infinite;
+        border: 2px solid var(--primary);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-button:hover {
+        background-color: transparent;
+        color: var(--light);
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(227, 6, 19, 0.4);
+        animation: none;
+      }
+
+      .cta-button::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: rgba(255, 255, 255, 0.1);
+        transform: rotate(45deg);
+        transition: all 0.3s ease;
+      }
+
+      .cta-button:hover::after {
+        left: 100%;
+      }
+
+      /* Общие стили для секций */
+      .section {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-size: 2.8rem;
+        margin-bottom: 60px;
+        color: var(--secondary);
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 5px;
+        background: var(--primary);
+        margin: 20px auto;
+        border-radius: 5px;
+      }
+
+      /* ========== Секция с особенностями ========== */
+      .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      .feature {
+        flex: 1 1 300px;
+        background: var(--light);
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        text-align: center;
+        border-top: 5px solid var(--primary);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .feature:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .feature::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--primary);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
+
+      .feature:hover::before {
+        transform: scaleX(1);
+      }
+
+      .feature-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+
+      .feature:hover .feature-icon {
+        transform: rotate(15deg) scale(1.1);
+      }
+
+      .feature h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: var(--secondary);
+        transition: color 0.3s ease;
+      }
+
+      .feature:hover h3 {
+        color: var(--primary);
+      }
+
+      /* ========== Секция демонстрации продукта ========== */
+      .product-showcase {
+        background: linear-gradient(to right, #f5f5f5 0%, #e0e0e0 100%);
+        padding: 80px 0;
+        text-align: center;
+        position: relative;
+      }
+
+      .product-image {
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+        perspective: 1000px;
+      }
+
+      .product-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        transform-style: preserve-3d;
+        transition:
+          transform 0.5s ease,
+          box-shadow 0.5s ease;
+      }
+
+      .product-image:hover img {
+        transform: rotateY(15deg) rotateX(5deg);
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Контейнер для деталей продукта */
+      .design-details {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+
+      .design-feature {
+        flex: 1 1 300px;
+        max-width: 350px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+
+      .design-feature:hover {
+        transform: translateY(-10px);
+      }
+
+      .design-feature img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        margin-bottom: 20px;
+      }
+
+      .design-feature img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .product-features {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      .product-feature {
+        flex: 1 1 250px;
+        max-width: 300px;
+        background: var(--light);
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        border-left: 4px solid var(--primary);
+      }
+
+      .product-feature:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border-left: 4px solid var(--accent);
+      }
+
+      /* ========== Секция CTA (призыва к действию) ========== */
+      .cta-section {
+        background: linear-gradient(135deg, var(--primary) 0%, #b80512 100%);
+        color: var(--light);
+        text-align: center;
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        left: -50px;
+        width: 200px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .cta-section::after {
+        content: "";
+        position: absolute;
+        bottom: -100px;
+        right: -100px;
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        animation: float 8s ease-in-out infinite 2s;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) translateX(0);
+        }
+        50% {
+          transform: translateY(-20px) translateX(20px);
+        }
+      }
+
+      .cta-title {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+      }
+
+      .cta-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--accent);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease;
+      }
+
+      .cta-section:hover .cta-title::after {
+        transform: scaleX(1);
+      }
+
+      .cta-subtitle {
+        font-size: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto 40px;
+      }
+
+      .cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .secondary-button {
+        background-color: transparent;
+        color: var(--light);
+        border: 2px solid var(--light);
+        padding: 15px 35px;
+        border-radius: 50px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .secondary-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--light);
+        transition: all 0.3s ease;
+        z-index: -1;
+      }
+
+      .secondary-button:hover {
+        background-color: var(--light);
+        color: var(--primary);
+      }
+
+      .secondary-button:hover::before {
+        left: 0;
+      }
+
+      /* ========== Секция с отзывами ========== */
+      .testimonials {
+        background-color: #f9f9f9;
+      }
+
+      .testimonial {
+        background: var(--light);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      .testimonial:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .testimonial::before {
+        content: '"';
+        font-family: Georgia, serif;
+        font-size: 5rem;
+        color: rgba(227, 6, 19, 0.1);
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        line-height: 1;
+      }
+
+      .testimonial-content {
+        position: relative;
+        z-index: 1;
+        font-style: italic;
+        margin-bottom: 20px;
+      }
+
+      .testimonial-author {
+        font-weight: bold;
+        color: var(--secondary);
+      }
+
+      /* ========== Подвал сайта ========== */
+      footer {
+        background-color: var(--dark);
+        color: var(--light);
+        padding: 40px 0;
+        text-align: center;
+        position: relative;
+      }
+
+      .footer-logo {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: var(--light);
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .footer-logo:hover {
+        color: var(--accent);
+        transform: scale(1.05);
+      }
+
+      .footer-slogan {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        opacity: 0.8;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+      }
+
+      .footer-link {
+        color: var(--light);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+        padding: 5px 10px;
+      }
+
+      .footer-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--accent);
+        transition: width 0.3s ease;
+      }
+
+      .footer-link:hover {
+        color: var(--accent);
+      }
+
+      .footer-link:hover::after {
+        width: 100%;
+      }
+
+      .footer-copyright {
+        opacity: 0.6;
+        font-size: 0.9rem;
+      }
+
+      /* ========== Анимации ========== */
+      .animate-delay-1 {
+        animation-delay: 0.2s;
+      }
+
+      .animate-delay-2 {
+        animation-delay: 0.4s;
+      }
+
+      .animate-delay-3 {
+        animation-delay: 0.6s;
+      }
+
+      /* ========== Прогресс бар прокрутки ========== */
+      .progress-container {
+        width: 100%;
+        height: 5px;
+        background: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+
+      .progress-bar {
+        height: 5px;
+        background: var(--primary);
+        width: 0%;
+        transition: width 0.1s ease;
+      }
+
+      /* ========== Кнопка "Наверх" ========== */
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .back-to-top.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        background: var(--secondary);
+        transform: translateY(-5px);
+      }
+
+      /* ========== Адаптивность ========== */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero-subtitle {
+          font-size: 1.3rem;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .cta-title {
+          font-size: 2.5rem;
+        }
+
+        .feature {
+          flex: 1 1 100%;
+        }
+
+        .product-feature {
+          flex: 1 1 100%;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      /* ========== Модальное окно ========== */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1001;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .modal.active {
+        display: flex;
+        opacity: 1;
+      }
+
+      .modal-content {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 600px;
+        width: 90%;
+        position: relative;
+        transform: translateY(-50px);
+        transition: transform 0.3s ease;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      }
+
+      .modal.active .modal-content {
+        transform: translateY(0);
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--dark);
+        transition: color 0.3s ease;
+      }
+
+      .close-modal:hover {
+        color: var(--primary);
+      }
+
+      /* ========== Анимация загрузки ========== */
+      .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition:
+          opacity 0.5s ease,
+          visibility 0.5s ease;
+      }
+
+      .loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .loader-circle {
+        width: 50px;
+        height: 50px;
+        border: 5px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        border-top-color: var(--accent);
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Прелоадер -->
+    <div class="loader">
+      <div class="loader-circle"></div>
+    </div>
+
+    <!-- Прогресс бар прокрутки -->
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Кнопка "Наверх" -->
+    <div class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Модальное окно -->
+    <div class="modal" id="productModal">
+      <div class="modal-content">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <h2>Оформить заказ</h2>
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="model">Модель:</label>
+            <select id="model" name="model">
+              <option value="standard">GlideGuard Triumph Standard</option>
+              <option value="pro">GlideGuard Triumph Pro</option>
+              <option value="veteran">
+                GlideGuard Triumph Veteran Edition
+              </option>
+            </select>
+          </div>
+          <button type="submit" class="cta-button">Заказать</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ========== Секция Hero (Главный баннер) ========== -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="animate__animated animate__fadeInDown">
+            GlideGuard Triumph
+          </h1>
+          <div
+            class="hero-subtitle animate__animated animate__fadeInDown animate__delay-1s"
+          >
+            Технологии будущего с памятью о подвиге
+          </div>
+          <p
+            class="animate__animated animate__fadeIn animate__delay-2s"
+            style="max-width: 800px; margin: 0 auto"
+          >
+            Уникальные ролики с ИИ-защитой и нейроинтерфейсом, посвящённые
+            бесстрашию героев Великой Отечественной войны. Ваш личный триумф в
+            каждом движении!
+          </p>
+          <div
+            class="hero-cta animate__animated animate__fadeInUp animate__delay-3s"
+          >
+            <a href="#order" class="cta-button" id="heroCta">Купить сейчас</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Секция с особенностями ========== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title animate__animated animate__fadeIn">
+          Почему GlideGuard Triumph?
+        </h2>
+        <div class="features">
+          <!-- Особенность 1 -->
+          <div
+            class="feature animate__animated animate__fadeInUp"
+            data-animate="animate__fadeInUp"
+          >
+            <img
+              src="5309829692968268574.jpg "
+              alt="Hyper-Adaptive AI"
+              class="feature-icon"
+            />
+            <h3>Hyper-Adaptive AI</h3>
+            <p>
+              ИИ предсказывает опасность до ее возникновения с точностью 99.9%
+            </p>
+          </div>
+
+          <!-- Особенность 2 -->
+          <div
+            class="feature animate__animated animate__fadeInUp animate-delay-1"
+            data-animate="animate__fadeInUp"
+          >
+            <img
+              src="5309829692968268584.jpg"
+              alt="Quantum Shield"
+              class="feature-icon"
+            />
+            <h3>Quantum Shield</h3>
+            <p>Технология "телепортации" при угрозе столкновения</p>
+          </div>
+
+          <!-- Особенность 3 -->
+          <div
+            class="feature animate__animated animate__fadeInUp animate-delay-2"
+            data-animate="animate__fadeInUp"
+          >
+            <img
+              src="5309829692968268591.jpg"
+              alt="Bio-Skin"
+              class="feature-icon"
+            />
+            <h3>Bio-Skin</h3>
+            <p>Меняет цвет и очищает воздух вокруг вас</p>
+          </div>
+
+          <!-- Особенность 4 -->
+          <div
+            class="feature animate__animated animate__fadeInUp animate-delay-3"
+            data-animate="animate__fadeInUp"
+          >
+            <img
+              src="5309829692968268581.jpg "
+              alt="Режим Память"
+              class="feature-icon"
+            />
+            <h3>Режим "Память"</h3>
+            <p>Голограммы героев ВОВ во время поездки</p>
+          </div>
+
+          <!-- Особенность 5 -->
+          <div
+            class="feature animate__animated animate__fadeInUp"
+            data-animate="animate__fadeInUp"
+          >
+            <img
+              src="5309829692968268582 (1).jpg"
+              alt="Беспроводная зарядка"
+              class="feature-icon"
+            />
+            <h3>Беспроводная зарядка</h3>
+            <p>От солнца и вашего движения - вечная энергия</p>
+          </div>
+
+          <!-- Особенность 6 -->
+          <div
+            class="feature animate__animated animate__fadeInUp animate-delay-1"
+            data-animate="animate__fadeInUp"
+          >
+            <img
+              src="5307886164432253366 (1).jpg"
+              alt="Нейроинтерфейс"
+              class="feature-icon"
+            />
+            <h3>Нейроинтерфейс</h3>
+            <p>Управляйте роликами силой мысли</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Секция демонстрации продукта ========== -->
+    <section class="product-showcase">
+      <div class="container">
+        <h2 class="section-title animate__animated animate__fadeIn">
+          GlideGuard Triumph в деталях
+        </h2>
+
+        <!-- Основное изображение продукта -->
+        <div
+          class="product-image animate__animated animate__zoomIn"
+          data-animate="animate__zoomIn"
+        >
+          <img
+            src="e4fa482a-5a82-486f-a8eb-e8bd7365d77a.jpg"
+            alt="GlideGuard Triumph - инновационные ролики будущего"
+            id="mainProductImage"
+          />
+        </div>
+
+        <!-- Детали дизайна продукта -->
+        <div class="design-details">
+          <!-- Деталь 1: Дизайн Победы -->
+          <div
+            class="design-feature animate__animated animate__fadeInLeft"
+            data-animate="animate__fadeInLeft"
+          >
+            <img src="image (2).jpg" alt="Дизайн Победы" class="detail-image" />
+            <h3>Дизайн Победы</h3>
+            <p>
+              Корпус цвета хаки с элементами брони, звезда Победы и георгиевская
+              лента
+            </p>
+          </div>
+
+          <!-- Деталь 2: Голографический интерфейс -->
+          <div
+            class="design-feature animate__animated animate__fadeInUp"
+            data-animate="animate__fadeInUp"
+          >
+            <img
+              src="голография.jpg"
+              alt="Голографический интерфейс"
+              class="detail-image"
+            />
+            <h3>Голографический интерфейс</h3>
+            <p>
+              Навигация и информация проецируются прямо перед вами в воздухе
+            </p>
+          </div>
+
+          <!-- Деталь 3: Экзоскелетная поддержка -->
+          <div
+            class="design-feature animate__animated animate__fadeInRight"
+            data-animate="animate__fadeInRight"
+          >
+            <img
+              src="5307886164432253382.jpg"
+              alt="Экзоскелетная поддержка"
+              class="detail-image"
+            />
+            <h3>Экзоскелетная поддержка</h3>
+            <p>Автоматическая адаптация под ваш стиль катания</p>
+          </div>
+        </div>
+
+        <!-- Технические особенности -->
+        <div class="product-features">
+          <div
+            class="product-feature animate__animated animate__fadeInLeft"
+            data-animate="animate__fadeInLeft"
+          >
+            <h3>Технические характеристики</h3>
+            <ul>
+              <li>Скорость: до 45 км/ч</li>
+              <li>Вес: 2.3 кг (пара)</li>
+              <li>Батарея: 5000 мАч</li>
+              <li>Защита: IP68</li>
+            </ul>
+          </div>
+          <div
+            class="product-feature animate__animated animate__fadeInUp"
+            data-animate="animate__fadeInUp"
+          >
+            <h3>Совместимость</h3>
+            <ul>
+              <li>iOS и Android</li>
+              <li>Умные часы</li>
+              <li>VR-гарнитуры</li>
+              <li>Умный дом</li>
+            </ul>
+          </div>
+          <div
+            class="product-feature animate__animated animate__fadeInRight"
+            data-animate="animate__fadeInRight"
+          >
+            <h3>Гарантии</h3>
+            <ul>
+              <li>3 года гарантии</li>
+              <li>Бесплатный сервис</li>
+              <li>Обновления ПО</li>
+              <li>Круглосуточная поддержка</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Секция с отзывами ========== -->
+    <section class="section testimonials">
+      <div class="container">
+        <h2 class="section-title animate__animated animate__fadeIn">
+          Отзывы первых пользователей
+        </h2>
+
+        <!-- Отзыв 1 -->
+        <div
+          class="testimonial animate__animated animate__fadeIn"
+          data-animate="animate__fadeIn"
+        >
+          <div class="testimonial-content">
+            "Это не просто транспорт - это революция! Никогда не чувствовал себя
+            так безопасно и технологично одновременно. Режим памяти о героях ВОВ
+            - это нечто потрясающее!"
+          </div>
+          <div class="testimonial-author">- Кирилл, 24 года, фотограф</div>
+        </div>
+
+        <!-- Отзыв 2 -->
+        <div
+          class="testimonial animate__animated animate__fadeIn animate-delay-1"
+          data-animate="animate__fadeIn"
+        >
+          <div class="testimonial-content">
+            "Как курьер, я оценил маневренность и скорость зарядки. Quantum
+            Shield уже дважды спасал меня от столкновений. Лучшее вложение в мою
+            карьеру!"
+          </div>
+          <div class="testimonial-author">- Дмитрий, 22 года, курьер</div>
+        </div>
+
+        <!-- Отзыв 3 -->
+        <div
+          class="testimonial animate__animated animate__fadeIn animate-delay-2"
+          data-animate="animate__fadeIn"
+        >
+          <div class="testimonial-content">
+            "Bio-Skin действительно очищает воздух! У меня астма, и после месяца
+            использования я заметил значительное улучшение дыхания во время
+            катания."
+          </div>
+          <div class="testimonial-author">- Анна, 28 лет, дизайнер</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Секция CTA (призыва к действию) ========== -->
+    <section class="cta-section" id="order">
+      <div class="container">
+        <h2 class="cta-title animate__animated animate__fadeInDown">
+          Готовы к своему триумфу?
+        </h2>
+        <p
+          class="cta-subtitle animate__animated animate__fadeIn animate-delay-1"
+        >
+          Присоединяйтесь к революции персонального транспорта! Оставьте заявку
+          сейчас и получите эксклюзивный бонус - виртуальную экскурсию по местам
+          боевой славы с голограммами героев ВОВ.
+        </p>
+        <div class="cta-buttons">
+          <a
+            href="#"
+            class="cta-button animate__animated animate__fadeInUp animate-delay-2"
+            id="orderButton"
+            >Купить сейчас</a
+          >
+          <a
+            href="#"
+            class="secondary-button animate__animated animate__fadeInUp animate-delay-3"
+            >Узнать больше</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Подвал сайта ========== -->
+    <footer>
+      <div class="container">
+        <div class="footer-logo">GlideGuard Triumph</div>
+        <div class="footer-slogan">Сохраняя традиции, создаем будущее</div>
+        <div class="footer-links">
+          <a href="#home" class="footer-link">Главная</a>
+          <a href="#features" class="footer-link">Технологии</a>
+          <a href="#testimonials" class="footer-link">Отзывы</a>
+          <a href="#order" class="footer-link">Заказать</a>
+          <a href="#" class="footer-link">Контакты</a>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="footer-copyright">
+          © 2045 GlideGuard Triumph. Все права защищены.
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========== JavaScript ========== -->
+    <script>
+      // Активация анимаций при прокрутке страницы
+      document.addEventListener("DOMContentLoaded", function () {
+        // Имитация загрузки
+        setTimeout(() => {
+          document.querySelector(".loader").classList.add("hidden");
+        }, 1500);
+
+        // Получаем все элементы с анимациями
+        const animateElements = document.querySelectorAll("[data-animate]");
+
+        // Создаем наблюдатель для отслеживания появления элементов в viewport
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                // Когда элемент появляется в зоне видимости
+                const animation = entry.target.dataset.animate;
+                entry.target.classList.add(animation);
+                // Прекращаем наблюдение за этим элементом
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1, // Срабатывает когда 10% элемента видно
+          }
+        );
+
+        // Начинаем наблюдение за всеми анимированными элементами
+        animateElements.forEach((element) => {
+          observer.observe(element);
+        });
+
+        // Эффект при наведении на изображение продукта
+        const productImage = document.querySelector(".product-image img");
+        if (productImage) {
+          productImage.addEventListener("mouseenter", function () {
+            this.style.transform = "rotateY(15deg) rotateX(5deg)";
+            this.style.boxShadow = "0 30px 70px rgba(0,0,0,0.3)";
+          });
+
+          productImage.addEventListener("mouseleave", function () {
+            this.style.transform = "rotateY(0) rotateX(0)";
+            this.style.boxShadow = "0 20px 50px rgba(0,0,0,0.2)";
+          });
+        }
+
+        // Прогресс бар прокрутки
+        window.addEventListener("scroll", function () {
+          const winScroll =
+            document.body.scrollTop || document.documentElement.scrollTop;
+          const height =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
+          const scrolled = (winScroll / height) * 100;
+          document.getElementById("progressBar").style.width = scrolled + "%";
+
+          // Кнопка "Наверх"
+          if (winScroll > 300) {
+            document.getElementById("backToTop").classList.add("active");
+          } else {
+            document.getElementById("backToTop").classList.remove("active");
+          }
+
+          // Изменение шапки при прокрутке
+          const header = document.querySelector(".hero");
+          if (winScroll > 50) {
+            header.style.opacity = "0.95";
+            header.style.padding = "70px 0";
+          } else {
+            header.style.opacity = "1";
+            header.style.padding = "100px 0";
+          }
+        });
+
+        // Плавная прокрутка для якорных ссылок
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+
+        // Кнопка "Наверх"
+        document
+          .getElementById("backToTop")
+          .addEventListener("click", function () {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          });
+
+        // Модальное окно
+        const modal = document.getElementById("productModal");
+        const orderButtons = [
+          document.getElementById("heroCta"),
+          document.getElementById("orderButton"),
+        ];
+
+        orderButtons.forEach((button) => {
+          if (button) {
+            button.addEventListener("click", function (e) {
+              e.preventDefault();
+              modal.classList.add("active");
+              document.body.style.overflow = "hidden";
+            });
+          }
+        });
+
+        document
+          .getElementById("closeModal")
+          .addEventListener("click", function () {
+            modal.classList.remove("active");
+            document.body.style.overflow = "auto";
+          });
+
+        // Закрытие модального окна при клике вне его
+        window.addEventListener("click", function (e) {
+          if (e.target === modal) {
+            modal.classList.remove("active");
+            document.body.style.overflow = "auto";
+          }
+        });
+
+        // Обработка формы
+        document
+          .getElementById("orderForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Здесь можно добавить AJAX-запрос для отправки формы
+            alert("Спасибо за заказ! Мы свяжемся с вами в ближайшее время.");
+            modal.classList.remove("active");
+            document.body.style.overflow = "auto";
+            this.reset();
+          });
+
+        // Параллакс эффект для hero секции
+        window.addEventListener("scroll", function () {
+          const scrollPosition = window.pageYOffset;
+          const hero = document.querySelector(".hero");
+          hero.style.backgroundPositionY = scrollPosition * 0.5 + "px";
+        });
+
+        // Анимация при наведении на социальные иконки
+        const socialLinks = document.querySelectorAll(".social-link");
+        socialLinks.forEach((link) => {
+          link.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-5px)";
+          });
+          link.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0)";
+          });
+        });
+
+        // Динамическое изменение цвета шапки при прокрутке
+        const sections = document.querySelectorAll("section");
+        window.addEventListener("scroll", function () {
+          let current = "";
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - 300) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          // Можно добавить логику изменения стилей в зависимости от текущей секции
+        });
+
+        // Анимация цифр (если есть статистика)
+        function animateValue(id, start, end, duration) {
+          const obj = document.getElementById(id);
+          let startTimestamp = null;
+          const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min(
+              (timestamp - startTimestamp) / duration,
+              1
+            );
+            obj.innerHTML = Math.floor(progress * (end - start) + start);
+            if (progress < 1) {
+              window.requestAnimationFrame(step);
+            }
+          };
+          window.requestAnimationFrame(step);
+        }
+
+        // Можно вызвать при появлении секции со статистикой
+        // animateValue("value1", 0, 99, 2000);
+      });
+    </script>
+  </body>
+</html>
